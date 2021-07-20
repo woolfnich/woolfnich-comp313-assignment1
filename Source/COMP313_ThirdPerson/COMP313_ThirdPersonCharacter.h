@@ -29,7 +29,7 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
-	UPROPERTY(VisibleAnywhere, Category=Character)
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Character)
 	bool didAttack;
 
 protected:
