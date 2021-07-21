@@ -14,7 +14,9 @@
 
 ACOMP313_ThirdPersonCharacter::ACOMP313_ThirdPersonCharacter()
 {
+	// Initial state, is not attacking.
 	didAttack = false;
+
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
 
@@ -90,7 +92,11 @@ void ACOMP313_ThirdPersonCharacter::OnResetVR()
 }
 
 void ACOMP313_ThirdPersonCharacter::JumpAttack_Implementation() {
+
+	// check that the player is airborne and has not already attacked
 	if (GetCharacterMovement()->IsFalling() && !this->didAttack) {
+
+		// send the player flying forwards
 		LaunchCharacter(FVector(GetActorForwardVector().X * 2000.f, GetActorForwardVector().Y * 2000.f, 0.f), true, false);
 		this->didAttack = true;
 	}
@@ -142,13 +148,18 @@ void ACOMP313_ThirdPersonCharacter::MoveRight(float Value)
 	
 		// get right vector 
 		const FVector Direction = FRotationMatrix(YawRotation).GetUnitAxis(EAxis::Y);
+
 		// add movement in that direction
 		AddMovementInput(Direction, Value);
 	}
 }
 
 void ACOMP313_ThirdPersonCharacter::Tick(float DeltaTime) {
+
+	// perform a normal tick
 	Super::Tick(DeltaTime);
+
+	// reset attack boolean on landing to allow further attacks on subsequent jumps.
 	if (!GetCharacterMovement()->IsFalling() && this->didAttack) {
 		this->didAttack = false;
 	}

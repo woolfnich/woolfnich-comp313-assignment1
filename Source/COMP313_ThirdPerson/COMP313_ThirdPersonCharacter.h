@@ -29,6 +29,8 @@ public:
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category=Camera)
 	float BaseLookUpRate;
 
+	/** Check if player has performed an attack, used both to prevent multiple attacks per jump and to see if an enemy can be killed.
+	Nicholas Woolf-Ben-Avraham **/
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Character)
 	bool didAttack;
 
@@ -43,6 +45,8 @@ protected:
 	/** Called for side to side input */
 	void MoveRight(float Value);
 
+	/** Called to perform a jump dash attack.
+	Nicholas Woolf-Ben-Avraham **/
 	UFUNCTION(BlueprintNativeEvent, BlueprintCallable, Category = "ThirdPersonCharacter")
 	void JumpAttack();
 
