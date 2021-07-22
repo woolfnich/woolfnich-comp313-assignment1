@@ -8,12 +8,17 @@
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "Sound/SoundCue.h"
+#include "Components/AudioComponent.h"
+#include "UObject/ConstructorHelpers.h"
+#include "Kismet/GameplayStatics.h"
 
 //////////////////////////////////////////////////////////////////////////
 // ACOMP313_ThirdPersonCharacter
 
 ACOMP313_ThirdPersonCharacter::ACOMP313_ThirdPersonCharacter()
 {
+
 	// Initial state, is not attacking.
 	didAttack = false;
 
@@ -95,6 +100,8 @@ void ACOMP313_ThirdPersonCharacter::JumpAttack_Implementation() {
 
 	// check that the player is airborne and has not already attacked
 	if (GetCharacterMovement()->IsFalling() && !this->didAttack) {
+
+		UAudioComponent* AudioComponent = UGameplayStatics::SpawnSoundAtLocation(this, whooshCue, GetActorLocation());
 
 		// send the player flying forwards
 		LaunchCharacter(FVector(GetActorForwardVector().X * 2000.f, GetActorForwardVector().Y * 2000.f, 0.f), true, false);

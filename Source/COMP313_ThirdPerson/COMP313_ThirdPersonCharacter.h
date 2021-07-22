@@ -34,6 +34,9 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Character)
 	bool didAttack;
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Audio)
+	class USoundCue* whooshCue;
+
 protected:
 
 	/** Resets HMD orientation in VR. */
