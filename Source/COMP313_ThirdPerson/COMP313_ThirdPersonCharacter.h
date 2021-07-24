@@ -30,7 +30,7 @@ public:
 	float BaseLookUpRate;
 
 	/** Check if player has performed an attack, used both to prevent multiple attacks per jump and to see if an enemy can be killed.
-	Nicholas Woolf-Ben-Avraham **/
+	Nicholas Woolf-Ben-Avraham */
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Character)
 	bool didAttack;
 
