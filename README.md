@@ -12,10 +12,18 @@ Video link - To Be Added
 
 ## References:
 Tree model: https://free3d.com/3d-model/tree-oak-v9-29481.html
+
 Footstep audio: https://www.premiumbeat.com/blog/40-free-footstep-foley-sound-effects/
+
 Laser sizzle: https://www.storyblocks.com/audio/stock/electrical-sizzle-sxogjjaniwrk0wxvglu.html
+
 Attack whoosh: https://www.fesliyanstudios.com/
+
 Button hover noise: https://freesound.org/people/unfa/sounds/565131/
+
 Item pickup noise: https://freesound.org/people/cameronmusic/sounds/138419/
+
 Enemy collision noise: https://soundbible.com/947-Metal-Bang.html
+
 Background ambience: https://erikmmusic.gumroad.com/l/cWdaX 
+
