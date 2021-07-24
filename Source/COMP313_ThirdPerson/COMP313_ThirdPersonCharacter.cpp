@@ -96,11 +96,14 @@ void ACOMP313_ThirdPersonCharacter::OnResetVR()
 	UHeadMountedDisplayFunctionLibrary::ResetOrientationAndPosition();
 }
 
+
+//** Nicholas Woolf-Ben-Avraham */
 void ACOMP313_ThirdPersonCharacter::JumpAttack_Implementation() {
 
 	// check that the player is airborne and has not already attacked
 	if (GetCharacterMovement()->IsFalling() && !this->didAttack) {
 
+		// play whoosh sfx at player location
 		UAudioComponent* AudioComponent = UGameplayStatics::SpawnSoundAtLocation(this, whooshCue, GetActorLocation());
 
 		// send the player flying forwards

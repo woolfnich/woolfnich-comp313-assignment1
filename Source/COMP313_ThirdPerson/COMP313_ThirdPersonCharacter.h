@@ -34,6 +34,8 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category=Character)
 	bool didAttack;
 
+	/** Audio source for jump attack.
+	Nicholas Woolf-Ben-Avraham */
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = Audio)
 	class USoundCue* whooshCue;
 
