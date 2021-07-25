@@ -8,7 +8,9 @@ It is hard to narrow down what the hardest part of the game to get working was, 
 
 I would say that the most ‘interesting’ part of the game is the dash attack, not due to any technical complexity, but more from a player’s perspective. While undeniably somewhat rough, and there are improvements I would like to make to it if I had more time, I would consider it the main sticking point of the game in its current state. The dash grants the player a rush of speed (it is the fastest movement action present) but at a slight loss of control, therefore both giving the satisfaction of a speed boost with the requirement of some skill to use it effectively without catapulting off the stage.
 
-Video link - To Be Added
+[Video link](/Video/woolfnich_COMP313.mp4)
+
+One change was made post-video, and that is the addition of a VSync toggle in the graphics options.
 
 ## References:
 Tree model: https://free3d.com/3d-model/tree-oak-v9-29481.html
