@@ -8,6 +8,10 @@ It is hard to narrow down what the hardest part of the game to get working was, 
 
 I would say that the most ‘interesting’ part of the game is the dash attack, not due to any technical complexity, but more from a player’s perspective. While undeniably somewhat rough, and there are improvements I would like to make to it if I had more time, I would consider it the main sticking point of the game in its current state. The dash grants the player a rush of speed (it is the fastest movement action present) but at a slight loss of control, therefore both giving the satisfaction of a speed boost with the requirement of some skill to use it effectively without catapulting off the stage.
 
+Note: If you come across an issue where enemies refuse to move, rebuild all three levels. This is an issue I came across that I wasn't able
+to reliably reproduce, but it is more common when accessing the main level from another level (i.e. MenuLevel), but rebuilding all levels seems to
+prevent this from happenning. This could easily be a conicidence.
+
 [Video link](https://drive.google.com/file/d/15n_LBbGQ3ZZVKl0EJscdCvNE0jCNn5hT/view?usp=sharing)
 
 One change was made post-video, and that is the addition of a VSync toggle in the graphics options.
